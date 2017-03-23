@@ -1,0 +1,24 @@
+<nav class="navbar navbar-toggleable-sm dark fixed-top z2">
+  <a class="navbar-brand o-r-margin" href="/#/user/{{repo.username}}">
+   	<i class="material-icons">keyboard_backspace</i>
+  </a>
+  <a class="navbar-brand" href="/#/">
+   	<i class="material-icons">home</i>
+  </a>
+</nav>
+
+<!-- repo.contributors -->
+<div class="container margin-top-100">
+ <div class="card-deck">
+  <div class="card"  style="margin-bottom: 50px;" ng-repeat="contributor in repo.contributors">
+    <img class="card-img-top" ng-src="{{contributor.avatar_url}}" alt="{{contributor.avatar_url}}">
+    <div class="card-block">
+      <h4 class="card-title">{{contributor.login}}</h4>
+    </div>
+    <div class="card-footer">
+     <a href="/#/user/{{contributor.login}}" class="card-link">Github Profile</a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
